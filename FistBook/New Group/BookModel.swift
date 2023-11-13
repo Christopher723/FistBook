@@ -21,135 +21,138 @@ struct PageView: View{
     
     
     var body: some View{
-        VStack{
-            Text("Page \(pageNumber)")
+        ZStack{
+            Color(.background)
+                .ignoresSafeArea()
+            VStack{
+                Text("Page \(pageNumber)")
                 
-                            
                 
-            if let imageName = page.imageName{
-                Image(imageName)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height: 400)
-                    .onTapGesture{
-                        if page.pageNumber > 9{
-                            isHelped = false
+                
+                if let imageName = page.imageName{
+                    Image(imageName)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 400)
+                        .onTapGesture{
+                            if page.pageNumber > 9{
+                                isHelped = false
+                            }
                         }
-                    }
-                    .onReceive(NotificationCenter.default.publisher(for: UIApplication.userDidTakeScreenshotNotification)) { _ in
-                        if page.pageNumber == 12{
-                            thugsDead += 1
+                        .onReceive(NotificationCenter.default.publisher(for: UIApplication.userDidTakeScreenshotNotification)) { _ in
+                            if page.pageNumber == 12{
+                                thugsDead += 1
+                            }
                         }
-                    }
-                
-                
-            }
-            if decision == "Eat"{
-                Text("\(mainCharacter) eats the sandwich, causing everyone in wano to starve.")
-                    .padding()
-                
-            }
-            else if decision == "Multiply"{
-                Text("\(mainCharacter) uses magical powers to multiply the sandwich allowing everyone to have food and no longer fight")
-                    .padding()
-            }
-                            
-                    else{
-                        if let text = page.pageText{
-                            Text(chapterText[text])
-                                .padding()
-                        }
-                        if page.isHelp != nil{
-                            Text(isHelped ? "" : "Thank you so much \(mainCharacter)")
-                                .padding()
-                        }
-                        if page.pageNumber == 12{
-                            Text("Thugs Alive : \(3 - thugsDead)")
-                                .padding()
-                        
-                    }
-                
-                
-            }
-            
-            
-            
-            Spacer()
-            
-            
-            
-            if let isShake = page.isShake{
-                if isShake == true{
-                    Button("Next Page"){
-                        onNextPage()
-                    }.onShake {
-                        myShake = false
-                    }
-                    .disabled(myShake)
-                    .padding()
+                    
                     
                 }
-            }else{
-                if let isHelp = page.isHelp{
-                    if isHelp == true{
+                if decision == "Eat"{
+                    Text("\(mainCharacter) eats the sandwich, causing everyone in wano to starve.")
+                        .padding()
+                    
+                }
+                else if decision == "Multiply"{
+                    Text("\(mainCharacter) uses magical powers to multiply the sandwich allowing everyone to have food and no longer fight")
+                        .padding()
+                }
+                
+                else{
+                    if let text = page.pageText{
+                        Text(chapterText[text])
+                            .padding()
+                    }
+                    if page.isHelp != nil{
+                        Text(isHelped ? "" : "Thank you so much \(mainCharacter)")
+                            .padding()
+                    }
+                    if page.pageNumber == 12{
+                        Text("Thugs Alive : \(3 - thugsDead)")
+                            .padding()
+                        
+                    }
+                    
+                    
+                }
+                
+                
+                
+                Spacer()
+                
+                
+                
+                if let isShake = page.isShake{
+                    if isShake == true{
                         Button("Next Page"){
                             onNextPage()
+                        }.onShake {
+                            myShake = false
                         }
-                        .disabled(isHelped)
+                        .disabled(myShake)
                         .padding()
                         
                     }
                 }else{
-                    if page.pageNumber == 12{
-                        Button("Next Page"){
-                            onNextPage()
-                        }
-                        .disabled(thugsDead <= 3)
-                        .padding()
-                    }
-                    else{
-                        if page.pageNumber == 15{
-                            HStack{
-                                Button("Eat"){
-                                    decision = "Eat"
-                                    onNextPage()
-                                        
-                                }
-                                .padding()
-                                
-                                Button("Multiply")
-                                {
-                                    decision = "Multiply"
-                                    onNextPage()
-                                        
-                                }
-                                .padding()
+                    if let isHelp = page.isHelp{
+                        if isHelp == true{
+                            Button("Next Page"){
+                                onNextPage()
                             }
+                            .disabled(isHelped)
+                            .padding()
                             
-                        }else{
-                            if page.pageNumber == 16{
-                                
+                        }
+                    }else{
+                        if page.pageNumber == 12{
+                            Button("Next Page"){
+                                onNextPage()
                             }
-                            else{
-                                Button("Next Page"){
-                                    onNextPage()
+                            .disabled(thugsDead <= 3)
+                            .padding()
+                        }
+                        else{
+                            if page.pageNumber == 15{
+                                HStack{
+                                    Button("Eat"){
+                                        decision = "Eat"
+                                        onNextPage()
+                                        
+                                    }
+                                    .padding()
+                                    
+                                    Button("Multiply")
+                                    {
+                                        decision = "Multiply"
+                                        onNextPage()
+                                        
+                                    }
+                                    .padding()
+                                }
+                                
+                            }else{
+                                if page.pageNumber == 16{
                                     
                                 }
-                                .padding()
+                                else{
+                                    Button("Next Page"){
+                                        onNextPage()
+                                        
+                                    }
+                                    .padding()
+                                }
+                                
                             }
-                            
                         }
                     }
                 }
+                
+                
+                
+                
             }
             
-            
-            
-            
         }
-        
     }
-    
     
 }
 
