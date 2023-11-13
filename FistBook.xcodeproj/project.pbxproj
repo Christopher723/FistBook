@@ -14,6 +14,8 @@
 		3A97E8842AFFF40800AA1758 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97E8832AFFF40800AA1758 /* BookModel.swift */; };
 		3A97E8872AFFF9CD00AA1758 /* CLIVariableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97E8862AFFF9CD00AA1758 /* CLIVariableModel.swift */; };
 		3A97E88B2B013BD900AA1758 /* ShakeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97E88A2B013BD900AA1758 /* ShakeGesture.swift */; };
+		3A97E8912B02C8FF00AA1758 /* myVideo.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 3A97E8902B02C8FF00AA1758 /* myVideo.MOV */; };
+		3A97E8942B02CA5700AA1758 /* intoTown.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 3A97E8932B02CA5700AA1758 /* intoTown.MOV */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		3A97E8832AFFF40800AA1758 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		3A97E8862AFFF9CD00AA1758 /* CLIVariableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLIVariableModel.swift; sourceTree = "<group>"; };
 		3A97E88A2B013BD900AA1758 /* ShakeGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeGesture.swift; sourceTree = "<group>"; };
+		3A97E8902B02C8FF00AA1758 /* myVideo.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = myVideo.MOV; sourceTree = "<group>"; };
+		3A97E8932B02CA5700AA1758 /* intoTown.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = intoTown.MOV; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +62,11 @@
 			isa = PBXGroup;
 			children = (
 				3A97E8752AFFF3F900AA1758 /* FistBookApp.swift */,
+				3A97E8922B02C9A200AA1758 /* Videos */,
 				3A97E8772AFFF3F900AA1758 /* ContentView.swift */,
-				3A97E8852AFFF9BB00AA1758 /* New Group */,
+				3A97E8862AFFF9CD00AA1758 /* CLIVariableModel.swift */,
+				3A97E88A2B013BD900AA1758 /* ShakeGesture.swift */,
+				3A97E8832AFFF40800AA1758 /* BookModel.swift */,
 				3A97E8792AFFF3FA00AA1758 /* Assets.xcassets */,
 				3A97E87B2AFFF3FA00AA1758 /* Preview Content */,
 			);
@@ -74,14 +81,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		3A97E8852AFFF9BB00AA1758 /* New Group */ = {
+		3A97E8922B02C9A200AA1758 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
-				3A97E8832AFFF40800AA1758 /* BookModel.swift */,
-				3A97E8862AFFF9CD00AA1758 /* CLIVariableModel.swift */,
-				3A97E88A2B013BD900AA1758 /* ShakeGesture.swift */,
+				3A97E8902B02C8FF00AA1758 /* myVideo.MOV */,
+				3A97E8932B02CA5700AA1758 /* intoTown.MOV */,
 			);
-			path = "New Group";
+			path = Videos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +149,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A97E87D2AFFF3FA00AA1758 /* Preview Assets.xcassets in Resources */,
+				3A97E8912B02C8FF00AA1758 /* myVideo.MOV in Resources */,
+				3A97E8942B02CA5700AA1758 /* intoTown.MOV in Resources */,
 				3A97E87A2AFFF3FA00AA1758 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
