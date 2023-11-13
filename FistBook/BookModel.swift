@@ -83,7 +83,7 @@ struct PageView: View{
                         Text(isHelped ? "" : "Thank you so much \(mainCharacter)")
                             .padding()
                     }
-                    if page.pageNumber == 12{
+                    if page.pageNumber == 12 && thugsDead < 3{
                         Text("Thugs Alive : \(3 - thugsDead)")
                             .padding()
                         
@@ -124,7 +124,7 @@ struct PageView: View{
                             Button("Next Page"){
                                 onNextPage()
                             }
-                            .disabled(thugsDead <= 3)
+                            .disabled(thugsDead < 3)
                             .padding()
                         }
                         else{
