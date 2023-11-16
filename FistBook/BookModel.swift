@@ -41,6 +41,11 @@ struct PageView: View{
                                             
                                             player.play()
                                         }
+                                        .onReceive(NotificationCenter.default.publisher(for: UIApplication.userDidTakeScreenshotNotification)) { _ in
+                                            if page.pageNumber == 12{
+                                                thugsDead += 1
+                                            }
+                                        }
                                 }
                 
                 
@@ -196,7 +201,7 @@ let myBook = Book(pages:
                      Page(pageNumber: 4, imageName: "Trophy", pageText: 2),
                      Page(pageNumber: 5, imageName: "Black", pageText: 3, isShake: true),
                      Page(pageNumber: 6, imageName: "CowboyTown", pageText: 4),
-                     Page(pageNumber: 7, imageName: "CowboyFight", pageText: 5),
+                     Page(pageNumber: 7, pageText: 5, videoName: "Fight"),
                      Page(pageNumber: 8, imageName: "CowboyCheering", pageText: 6),
                      
                      
@@ -206,7 +211,7 @@ let myBook = Book(pages:
                      
                      Page(pageNumber: 11, imageName: "CowboyStore", pageText: 9),
                     
-                     Page(pageNumber: 12, imageName: "Bandits", pageText: 10),
+                     Page(pageNumber: 12, pageText: 10, videoName: "Shooting"),
                      
                      Page(pageNumber: 13, imageName: "ThankYou", pageText: 11),
                      

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A8C2CBD2B0694C1003E8362 /* Duel.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 3A8C2CBC2B0694C1003E8362 /* Duel.MOV */; };
+		3A8C2CBF2B0694C9003E8362 /* Fight.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 3A8C2CBE2B0694C9003E8362 /* Fight.MOV */; };
+		3A8C2CC12B0694DB003E8362 /* Shooting.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 3A8C2CC02B0694DB003E8362 /* Shooting.MOV */; };
 		3A97E8762AFFF3F900AA1758 /* FistBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97E8752AFFF3F900AA1758 /* FistBookApp.swift */; };
 		3A97E8782AFFF3F900AA1758 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97E8772AFFF3F900AA1758 /* ContentView.swift */; };
 		3A97E87A2AFFF3FA00AA1758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A97E8792AFFF3FA00AA1758 /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A8C2CBC2B0694C1003E8362 /* Duel.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Duel.MOV; sourceTree = "<group>"; };
+		3A8C2CBE2B0694C9003E8362 /* Fight.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Fight.MOV; sourceTree = "<group>"; };
+		3A8C2CC02B0694DB003E8362 /* Shooting.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Shooting.MOV; sourceTree = "<group>"; };
 		3A97E8722AFFF3F900AA1758 /* FistBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FistBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A97E8752AFFF3F900AA1758 /* FistBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FistBookApp.swift; sourceTree = "<group>"; };
 		3A97E8772AFFF3F900AA1758 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +92,9 @@
 			children = (
 				3A97E8902B02C8FF00AA1758 /* myVideo.MOV */,
 				3A97E8932B02CA5700AA1758 /* intoTown.MOV */,
+				3A8C2CBC2B0694C1003E8362 /* Duel.MOV */,
+				3A8C2CBE2B0694C9003E8362 /* Fight.MOV */,
+				3A8C2CC02B0694DB003E8362 /* Shooting.MOV */,
 			);
 			path = Videos;
 			sourceTree = "<group>";
@@ -151,7 +160,10 @@
 				3A97E87D2AFFF3FA00AA1758 /* Preview Assets.xcassets in Resources */,
 				3A97E8912B02C8FF00AA1758 /* myVideo.MOV in Resources */,
 				3A97E8942B02CA5700AA1758 /* intoTown.MOV in Resources */,
+				3A8C2CBF2B0694C9003E8362 /* Fight.MOV in Resources */,
+				3A8C2CC12B0694DB003E8362 /* Shooting.MOV in Resources */,
 				3A97E87A2AFFF3FA00AA1758 /* Assets.xcassets in Resources */,
+				3A8C2CBD2B0694C1003E8362 /* Duel.MOV in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
